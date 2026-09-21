@@ -24,6 +24,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />
 
+    <link rel="stylesheet" href="./assets/css/tailwind.css">
+    <link rel="stylesheet" href="./assets/css/index.css">
+
     <style>
       html, body { height: 100%; margin: 0; overflow: hidden; background: #efe9df; }
 
@@ -61,9 +64,6 @@
         user-select: none;
       }
 
-      /* top scrim so the nav stays legible over bright images */
-      .top-scrim { position: fixed; inset: 0 0 auto 0; height: 130px; z-index: 40; pointer-events: none;
-        background: linear-gradient(180deg, rgba(20,18,16,0.45), rgba(20,18,16,0)); }
       .hint { position: fixed; left: 50%; bottom: 26px; transform: translateX(-50%); z-index: 40; pointer-events: none;
         color: #fff; font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; opacity: .85;
         text-shadow: 0 1px 8px rgba(0,0,0,.5); display: inline-flex; align-items: center; gap: 8px; }
@@ -90,12 +90,9 @@
     </div>
     <div id="menuOverlay" class="fixed inset-0 bg-black/40 z-[90] hidden"></div>
 
-    <!-- Top scrim -->
-    <div class="top-scrim"></div>
-
     <!-- Navbar (fixed above canvas) -->
-    <nav class="fixed top-0 left-0 w-full z-[50] text-white">
-      <div class="px-4 sm:px-6 lg:px-10 py-5 sm:py-6 flex items-center justify-between border-b border-white/25">
+    <nav id="mainNav" class="fixed top-0 left-0 w-full z-[50] text-black">
+      <div class="px-4 sm:px-6 lg:px-10 py-5 sm:py-6 flex items-center justify-between border-b border-black/10">
         <a href="index.html#home" class="font-secondary text-[18px] leading-[24px] font-medium tracking-wide">Solace Interiors</a>
         <ul class="hidden md:flex items-center gap-8 lg:gap-12 font-secondary text-[14px] leading-[18px] font-medium">
             <li><a href="portfolio.html" class="menu-link hover:opacity-60 transition-opacity">Portfolio</a></li>
@@ -106,7 +103,7 @@
             <li><a href="contact.html" class="menu-link hover:opacity-60 transition-opacity">Enquiries</a></li>
           </ul>
         <div id="openMenuBtn" class="md:hidden cursor-pointer flex flex-col gap-[6px] items-end shrink-0">
-          <span class="block w-7 h-[1.5px] bg-white"></span><span class="block w-7 h-[1.5px] bg-white"></span><span class="block w-7 h-[1.5px] bg-white"></span>
+          <span class="block w-7 h-[1.5px] bg-black"></span><span class="block w-7 h-[1.5px] bg-black"></span><span class="block w-7 h-[1.5px] bg-black"></span>
         </div>
       </div>
     </nav>
