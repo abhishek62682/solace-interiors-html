@@ -1,7 +1,7 @@
 {
-  "name": "solace-interiors-html",
+  "name": "verano-interiors-html",
   "version": "1.0.0",
-  "description": "Solace Interiors - Interior Design HTML Template (Tailwind CSS v4 build source)",
+  "description": "Verano Interiors - Interior Design HTML Template (Tailwind CSS v4 build source)",
   "main": "index.js",
   "scripts": {
     "dev": "tailwindcss -i ./src/input.css -o ./HTML/assets/css/tailwind.css --watch",
