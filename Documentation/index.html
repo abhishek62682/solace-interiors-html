@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Solace Interiors — Documentation</title>
+<style>
+  :root{
+    --ink:#2b2724; --muted:#6b6259; --bg:#faf7f2; --panel:#ffffff;
+    --line:#e7ddcc; --accent:#5d5346; --code-bg:#f1ebe1;
+    --sidebar-w:260px;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Manrope,Arial,sans-serif;
+    background:var(--bg); color:var(--ink); line-height:1.65;
+  }
+  a{color:var(--accent);}
+  .layout{display:flex; min-height:100vh;}
+  nav.sidebar{
+    width:var(--sidebar-w); flex-shrink:0; background:var(--panel);
+    border-right:1px solid var(--line); padding:28px 20px; position:sticky; top:0; height:100vh; overflow-y:auto;
+  }
+  nav.sidebar h1{font-size:18px; margin:0 0 4px;}
+  nav.sidebar p.tag{font-size:12px; color:var(--muted); margin:0 0 24px;}
+  nav.sidebar a{
+    display:block; padding:7px 10px; border-radius:6px; text-decoration:none;
+    color:var(--ink); font-size:14px; margin-bottom:2px;
+  }
+  nav.sidebar a:hover{background:var(--code-bg);}
+  main{flex:1; padding:48px 56px; max-width:900px;}
+  section{margin-bottom:56px; scroll-margin-top:24px;}
+  h2{font-size:26px; border-bottom:1px solid var(--line); padding-bottom:12px; margin-top:0;}
+  h3{font-size:18px; margin-top:28px;}
+  code, pre{
+    background:var(--code-bg); border-radius:6px; font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  }
+  code{padding:2px 6px; font-size:13px;}
+  pre{padding:16px 18px; overflow-x:auto; font-size:13px; line-height:1.6;}
+  table{border-collapse:collapse; width:100%; margin:16px 0; font-size:14px;}
+  th,td{border:1px solid var(--line); padding:8px 12px; text-align:left;}
+  th{background:var(--code-bg);}
+  ul{padding-left:20px;}
+  .badge{
+    display:inline-block; background:var(--code-bg); color:var(--accent);
+    border-radius:999px; padding:3px 10px; font-size:12px; font-weight:600; margin-right:6px;
+  }
+  .note{
+    background:var(--code-bg); border-left:3px solid var(--accent); padding:12px 16px; border-radius:0 6px 6px 0; font-size:14px;
+  }
+  .warn{
+    background:#fbeae7; border-left:3px solid #c0392b; padding:12px 16px; border-radius:0 6px 6px 0; font-size:14px;
+  }
+  footer{padding:32px 56px; color:var(--muted); font-size:13px;}
+  @media (max-width:860px){
+    .layout{flex-direction:column;}
+    nav.sidebar{width:100%; height:auto; position:relative;}
+    main{padding:28px 20px;}
+  }
+</style>
+</head>
+<body>
+<div class="layout">
+
+  <nav class="sidebar">
+    <h1>Solace Interiors</h1>
+    <p class="tag">HTML Template Documentation</p>
+    <a href="#introduction">Introduction</a>
+    <a href="#folder-structure">Folder Structure</a>
+    <a href="#getting-started">Getting Started</a>
+    <a href="#css-structure">CSS Structure</a>
+    <a href="#tailwind">Tailwind CSS</a>
+    <a href="#js-structure">JavaScript Structure</a>
+    <a href="#forms">Forms</a>
+    <a href="#fonts">Fonts</a>
+    <a href="#icons">Icons</a>
+    <a href="#plugins">Plugins &amp; Libraries</a>
+    <a href="#images">Image Credits</a>
+    <a href="#support">Support Notes</a>
+  </nav>
+
+  <main>
+
+    <section id="introduction">
+      <h2>Introduction</h2>
+      <p><strong>Solace Interiors</strong> is a clean, editorial-style HTML template built for interior design studios, architecture firms and civil engineering practices. It ships with 7 ready pages covering a homepage, portfolio, gallery, services, about, contact and a cost-calculator page, plus a documentation set to help you customize it quickly.</p>
+      <p><span class="badge">HTML5</span><span class="badge">Tailwind CSS v4</span><span class="badge">Vanilla JS</span><span class="badge">Swiper</span><span class="badge">GSAP</span></p>
+    </section>
+
+    <section id="folder-structure">
+      <h2>Folder Structure</h2>
+      <pre>Solace-Interiors/
+│
+├── HTML/
+│   ├── index.html
+│   ├── about.html
+│   ├── services.html
+│   ├── portfolio.html
+│   ├── gallery.html
+│   ├── cost-calculator.html
+│   ├── contact.html
+│   │
+│   └── assets/
+│       ├── css/
+│       │   ├── tailwind.css      (compiled production CSS — do not hand-edit)
+│       │   └── index.css         (small custom overrides)
+│       ├── img/
+│       │   ├── logo/
+│       │   ├── testimonials/
+│       │   └── favicon.svg
+│       └── js/                   (reserved for your own scripts)
+│
+├── Documentation/
+│   └── index.html                (this file)
+│
+├── src/
+│   └── input.css                 (Tailwind source — edit THIS, then rebuild)
+│
+├── package.json
+├── README.txt
+└── ENVATO-SUBMISSION.md</pre>
+      <p>Everything a buyer needs to run the site lives inside <code>HTML/</code>. The <code>src/</code> folder and <code>package.json</code> are only needed if you want to edit the Tailwind design tokens.</p>
+    </section>
+
+    <section id="getting-started">
+      <h2>Getting Started</h2>
+      <h3>Opening the template</h3>
+      <p>No build step is required to preview the site. Open any file inside <code>HTML/</code> directly in a browser, or serve the folder with any static server (Live Server, <code>python3 -m http.server</code>, etc.).</p>
+
+      <h3>Editing text</h3>
+      <p>All copy lives directly in the HTML — open the relevant page in a code editor and edit the text between tags. There is no CMS or templating layer.</p>
+
+      <h3>Replacing images</h3>
+      <p>Images in the live preview are pulled from an external demo CDN for preview purposes only and are <strong>not included</strong> in the download package (see <a href="#images">Image Credits</a>). Replace every <code>&lt;img src="..."&gt;</code> with your own licensed photography, keeping the same aspect ratio where possible.</p>
+
+      <h3>Changing the logo</h3>
+      <p>The logo used in the mobile menu is at <code>assets/img/logo/logo-white.png</code>. Swap this file with your own (transparent PNG or SVG recommended, roughly square). The text wordmark in the header/footer is plain HTML text — edit it directly.</p>
+
+      <h3>Changing colors</h3>
+      <p>Brand colors are defined as Tailwind design tokens in <code>src/input.css</code>:</p>
+      <pre>@theme {
+  --color-clifford: #da373d;
+  --font-secondary: "Manrope", sans-serif;
+  --font-primary: "Hedvig Letters Serif", serif;
+  --text-csm: 16px;
+}</pre>
+      <p>Most of the palette (blacks, creams, browns) is applied with Tailwind arbitrary values directly in the HTML (e.g. <code>bg-[#5d5346]</code>) rather than tokens — use find &amp; replace across the <code>HTML/</code> folder to re-theme quickly.</p>
+
+      <h3>Changing fonts</h3>
+      <p>Fonts are loaded from Google Fonts in the <code>&lt;head&gt;</code> of every page. Swap the <code>&lt;link&gt;</code> tags and update <code>--font-primary</code> / <code>--font-secondary</code> in <code>src/input.css</code>, then rebuild (see <a href="#tailwind">Tailwind CSS</a>).</p>
+
+      <h3>Editing navigation &amp; footer</h3>
+      <p>The main nav, mobile menu and footer markup is repeated at the top/bottom of every page (this is a static HTML template, not a component system). Edit each page individually, or use your editor's multi-file find &amp; replace.</p>
+
+      <h3>Adding / removing sections</h3>
+      <p>Each page is divided into clearly commented <code>&lt;section&gt;</code> blocks. Duplicate a section block to repeat it, or delete the whole <code>&lt;section&gt;…&lt;/section&gt;</code> to remove it.</p>
+    </section>
+
+    <section id="css-structure">
+      <h2>CSS Structure</h2>
+      <table>
+        <tr><th>File</th><th>Purpose</th></tr>
+        <tr><td><code>assets/css/tailwind.css</code></td><td>Compiled, minified production CSS. Generated from <code>src/input.css</code> — do not edit directly, your changes will be overwritten on rebuild.</td></tr>
+        <tr><td><code>assets/css/index.css</code></td><td>Small hand-written CSS for things outside Tailwind's reach (Swiper base rules, nav blur-on-scroll state, cursor rules).</td></tr>
+        <tr><td>Inline <code>&lt;style&gt;</code> blocks</td><td>A few pages keep a small page-specific block (e.g. the cost calculator's slider styling) that isn't reused elsewhere.</td></tr>
+      </table>
+    </section>
+
+    <section id="tailwind">
+      <h2>Tailwind CSS</h2>
+      <p>This template uses <strong>Tailwind CSS v4</strong>, compiled ahead of time into a static file — <strong>you do not need Node.js just to view or deploy the template.</strong> The compiled <code>tailwind.css</code> is already included in <code>HTML/assets/css/</code>.</p>
+      <p>Node is only needed if you want to change design tokens (colors, fonts) or add new utility classes:</p>
+      <h3>Requirements</h3>
+      <p>Node.js 18+ and npm.</p>
+      <h3>Installation</h3>
+      <pre>npm install</pre>
+      <h3>Development (watch mode)</h3>
+      <pre>npm run dev</pre>
+      <h3>Production build</h3>
+      <pre>npm run build</pre>
+      <p>Both commands read <code>src/input.css</code> and write the compiled file to <code>HTML/assets/css/tailwind.css</code>.</p>
+    </section>
+
+    <section id="js-structure">
+      <h2>JavaScript Structure</h2>
+      <p>JavaScript is written directly inside each page in <code>&lt;script&gt;</code> blocks near the closing <code>&lt;/body&gt;</code> tag, grouped by feature (mobile menu, nav blur-on-scroll, Swiper sliders, GSAP scroll animations, cost calculator logic, contact form validation). No console errors or debug statements are present in the shipped code.</p>
+      <p>Third-party libraries are loaded via CDN <code>&lt;script&gt;</code> tags in the <code>&lt;head&gt;</code>/before <code>&lt;/body&gt;</code> — see <a href="#plugins">Plugins &amp; Libraries</a>.</p>
+    </section>
+
+    <section id="forms">
+      <h2>Forms</h2>
+      <p>The <strong>Contact</strong> and <strong>Cost Calculator</strong> pages include front-end forms with client-side validation (required fields, basic email/phone checks) implemented in vanilla JavaScript.</p>
+      <div class="warn">
+        <strong>No backend is included.</strong> Submitting a form currently only shows a client-side "thank you" confirmation — it does not send an email or store data anywhere. To make the forms functional, connect the existing <code>fetch()</code> call (or add one) to a backend of your choice:
+      </div>
+      <ul>
+        <li>A simple PHP mail script</li>
+        <li>A Node.js / Express endpoint</li>
+        <li><a href="https://formspree.io" target="_blank" rel="noopener">Formspree</a></li>
+        <li><a href="https://web3forms.com" target="_blank" rel="noopener">Web3Forms</a></li>
+        <li>Your own API</li>
+      </ul>
+    </section>
+
+    <section id="fonts">
+      <h2>Fonts</h2>
+      <table>
+        <tr><th>Font</th><th>Source</th><th>Usage</th></tr>
+        <tr><td>Manrope</td><td>Google Fonts (Open Font License)</td><td>Body / secondary text</td></tr>
+        <tr><td>Hedvig Letters Serif</td><td>Google Fonts (Open Font License)</td><td>Headings / primary font</td></tr>
+      </table>
+      <p>Both are free for commercial use and loaded via Google Fonts CDN.</p>
+    </section>
+
+    <section id="icons">
+      <h2>Icons</h2>
+      <p><strong>Remix Icon</strong> (<a href="https://remixicon.com" target="_blank" rel="noopener">remixicon.com</a>) — open source, free for commercial use, loaded via CDN.</p>
+    </section>
+
+    <section id="plugins">
+      <h2>Plugins &amp; Libraries</h2>
+      <table>
+        <tr><th>Library</th><th>Version</th><th>Purpose</th><th>License</th></tr>
+        <tr><td>Tailwind CSS</td><td>v4</td><td>Utility CSS framework</td><td>MIT</td></tr>
+        <tr><td>Swiper</td><td>v12</td><td>Image / testimonial sliders</td><td>MIT</td></tr>
+        <tr><td>GSAP + ScrollTrigger + SplitText</td><td>3.13.0 (pinned)</td><td>Scroll-based reveal animations</td><td>Free tier — see gsap.com license terms for commercial use</td></tr>
+        <tr><td>Remix Icon</td><td>4.9.0</td><td>Icon font</td><td>Apache 2.0</td></tr>
+      </table>
+      <p>All libraries are loaded from CDN (jsDelivr) and are actively used — nothing unused has been left in the codebase.</p>
+    </section>
+
+    <section id="images">
+      <h2>Image Credits</h2>
+      <div class="warn">
+        Images used in the live preview are for demonstration purposes only and are <strong>not included in the download package</strong>. They are currently hot-linked from a third-party CDN for preview convenience — replace every image source with your own licensed photography before deploying a live site.
+      </div>
+      <p>Team member and testimonial photos in the preview are placeholder/demo imagery and do not depict real clients or staff of the buyer's business.</p>
+    </section>
+
+    <section id="support">
+      <h2>Support Notes</h2>
+      <p>This is an HTML/CSS/JS template. Basic working knowledge of HTML, CSS and JavaScript is recommended to customize it beyond text and image swaps (e.g. re-theming colors, editing animations, wiring up a form backend).</p>
+      <p>Thank you for using Solace Interiors!</p>
+    </section>
+
+  </main>
+</div>
+<footer>Solace Interiors — Documentation · v1.0.0</footer>
+</body>
+</html>

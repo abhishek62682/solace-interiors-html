@@ -1,0 +1,19 @@
+{
+  "name": "solace-interiors-html",
+  "version": "1.0.0",
+  "description": "Solace Interiors - Interior Design HTML Template (Tailwind CSS v4 build source)",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tailwindcss -i ./src/input.css -o ./HTML/assets/css/tailwind.css --watch",
+    "build": "tailwindcss -i ./src/input.css -o ./HTML/assets/css/tailwind.css --minify"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.3",
+    "tailwindcss": "^4.3.3"
+  },
+  "private": true
+}
